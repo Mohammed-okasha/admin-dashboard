@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- font-awesome link ============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <section id="dashboard">
+
+    <!-- Start Aside --------->
+    <aside class="aside">
+        <!-- Logo ---->
+        <a href="#" class="logo">
+            <i class="fas fa-hiking"></i>
+            <span>travel</span>
+        </a>
+
+        <!-- Navigattion Links --------->
+        <ul class="links">
+            <li>
+                <a href="#">
+                    <i class="fas fa-home-alt"></i>
+                    <span>dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-user"></i>
+                    <span>customers</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-comment"></i>
+                    <span>messages</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-question-circle"></i>
+                    <span>help</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span>setting</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-lock"></i>
+                    <span>password</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-sign-out"></i>
+                    <span>sign out</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Close Btn -->
+        <button id="close">
+            <i class="fas fa-times"></i>
+        </button>
+    </aside>
+    <!-- End Aside --------->
+<!-- ================================================ -->
+    <!-- Content container -->
+    <div class="content-container">
+
+        <!-- Header ------>
+        <header id="header">
+            <!-- Nav Btn ----->
+            <button id="nav-btn">
+                <span class="toggle"></span>
+            </button>
+
+            <!-- Search Input ==========-->
+            <form action="">
+                <div class="search">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <input type="search" name="search" placeholder="Search Here" required>
+                </div>
+            </form>
+            
+            <!-- Admin ------>
+            <div class="admin-img">
+                <img src="image-jeremy.png" alt="" width="50px" style="cursor: pointer;">
+            </div>
+        </header>
+        <!--================================================ -->
+        <!-- Start Statistics -->
+        <div class="statistics">
+                <!-- box 1 ----->
+                <div class="box">
+                    <!-- info -->
+                    <div class="info">
+                        <div class="text">
+                            <span>1,042</span>
+                            <span>daily views</span>
+                        </div>
+                        <!-- Icon -->
+                        <i class="fas fa-eye fa-3x"></i>
+                    </div>
+                </div>
+                <!-- box 2 ----->
+                <div class="box">
+                    <!-- info -->
+                    <div class="info">
+                            <div class="text">
+                                <span>80</span>
+                                <span>saels</span>
+                            </div>
+                        <!-- Icon -->
+                        <i class="fas fa-shopping-cart fa-3x"></i>
+                    </div>
+                </div>
+                <!-- box 3 ----->
+                <div class="box">
+                    <!-- info -->
+                    <div class="info">
+                            <div class="text">
+                                <span>200</span>
+                                <span> comments</span>
+                            </div>
+                        <!-- Icon -->
+                        <i class="fas fa-comment fa-3x"></i>
+                    </div>
+                </div>
+                <!-- box 4 ----->
+                <div class="box">
+                    <!-- info -->
+                    <div class="info">
+                        <div class="text">
+                            <span>$5,702</span>
+                            <span>earning</span>
+                        </div>
+                        <!-- Icon -->
+                        <i class="fas fa-dollar-sign fa-3x"></i>
+                    </div>
+            </div>
+        </div>
+        <!--================================================ -->
+        <!-- Recent container ------>
+        <div class="recent-container">
+
+            <!-- Recent Orders ==========-->
+            <div class="recent-orders">
+                <!-- Heading ---->
+                <div class="heading">
+                    <h2>Recent Orders</h2>
+                    <!-- view All Btn -->
+                    <button class="view">View All</button>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <!-- Col 1 ----->
+                    <div class="col">
+                        <div class="title">
+                            <strong>name</strong>
+                        </div>
+                        <div class="title">
+                            <strong>price</strong>
+                        </div>
+                    </div>
+                    <!-- Col 2 ----->
+                    <div class="col">
+                        <div class="title">
+                            <strong>payment</strong>
+                        </div>
+                        <div class="title">
+                            <strong>status</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 1 -->
+                <div class="row">
+                    <!-- Col 1 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>star refrigeratar</span>
+                        </div>
+                        <div class="title">
+                            <span>$620</span>
+                        </div>
+                    </div>
+                    <!-- Col 2 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>due</span>
+                        </div>
+                        <div class="title">
+                            <span style="background-color: rgb(150, 201, 69);">delivered</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="row">
+                    <!-- Col 1 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>star refrigeratar</span>
+                        </div>
+                        <div class="title">
+                            <span>$620</span>
+                        </div>
+                    </div>
+                    <!-- Col 2 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>due</span>
+                        </div>
+                        <div class="title">
+                            <span style="background-color: rgb(231, 196, 0);">pending</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="row">
+                    <!-- Col 1 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>star refrigeratar</span>
+                        </div>
+                        <div class="title">
+                            <span>$620</span>
+                        </div>
+                    </div>
+                    <!-- Col 2 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>due</span>
+                        </div>
+                        <div class="title">
+                            <span style="background-color: brown;">return</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="row">
+                    <!-- Col 1 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>star refrigeratar</span>
+                        </div>
+                        <div class="title">
+                            <span>$620</span>
+                        </div>
+                    </div>
+                    <!-- Col 2 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>due</span>
+                        </div>
+                        <div class="title">
+                            <span style="background-color: rgb(0, 153, 255);">in progress</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="row">
+                    <!-- Col 1 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>star refrigeratar</span>
+                        </div>
+                        <div class="title">
+                            <span>$620</span>
+                        </div>
+                    </div>
+                    <!-- Col 2 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>due</span>
+                        </div>
+                        <div class="title">
+                            <span style="background-color: rgb(150, 201, 69);">delivered</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 6 -->
+                <div class="row">
+                    <!-- Col 1 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>star refrigeratar</span>
+                        </div>
+                        <div class="title">
+                            <span>$620</span>
+                        </div>
+                    </div>
+                    <!-- Col 2 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>due</span>
+                        </div>
+                        <div class="title">
+                            <span style="background-color: rgb(231, 196, 0);">pending</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 7 -->
+                <div class="row">
+                    <!-- Col 1 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>star refrigeratar</span>
+                        </div>
+                        <div class="title">
+                            <span>$620</span>
+                        </div>
+                    </div>
+                    <!-- Col 2 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>due</span>
+                        </div>
+                        <div class="title">
+                            <span style="background-color: brown;">return</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 8 -->
+                <div class="row">
+                    <!-- Col 1 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>star refrigeratar</span>
+                        </div>
+                        <div class="title">
+                            <span>$620</span>
+                        </div>
+                    </div>
+                    <!-- Col 2 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>due</span>
+                        </div>
+                        <div class="title">
+                            <span style="background-color: rgb(0, 153, 255);">in progress</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 9 -->
+                <div class="row">
+                    <!-- Col 1 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>star refrigeratar</span>
+                        </div>
+                        <div class="title">
+                            <span>$620</span>
+                        </div>
+                    </div>
+                    <!-- Col 2 ----->
+                    <div class="col">
+                        <div class="title">
+                            <span>due</span>
+                        </div>
+                        <div class="title">
+                            <span style="background-color: rgb(231, 196, 0);">pending</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Customers ==========-->
+            <div id="recent-customers">
+                <!-- Heading -->
+                <h2>Recent Customers</h2>
+
+                <!-- Box 1 -->
+                <div class="box">
+                    <img src="image-jeremy.png" alt="" class="img">
+                    <!-- Info -->
+                    <div class="info">
+                        <strong>mohammed</strong>
+                        <span>egypt</span>
+                    </div>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="box">
+                    <img src="image-jeremy.png" alt="" class="img">
+                    <!-- Info -->
+                    <div class="info">
+                        <strong>mohammed</strong>
+                        <span>egypt</span>
+                    </div>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="box">
+                    <img src="image-jeremy.png" alt="" class="img">
+                    <!-- Info -->
+                    <div class="info">
+                        <strong>mohammed</strong>
+                        <span>egypt</span>
+                    </div>
+                </div>
+
+                <!-- Box 4 -->
+                <div class="box">
+                    <img src="image-jeremy.png" alt="" class="img">
+                    <!-- Info -->
+                    <div class="info">
+                        <strong>mohammed</strong>
+                        <span>egypt</span>
+                    </div>
+                </div>
+
+                <!-- Box 5 -->
+                <div class="box">
+                    <img src="image-jeremy.png" alt="" class="img">
+                    <!-- Info -->
+                    <div class="info">
+                        <strong>mohammed</strong>
+                        <span>egypt</span>
+                    </div>
+                </div>
+
+                <!-- Box 6 -->
+                <div class="box">
+                    <img src="image-jeremy.png" alt="" class="img">
+                    <!-- Info -->
+                    <div class="info">
+                        <strong>mohammed</strong>
+                        <span>egypt</span>
+                    </div>
+                </div>
+
+                <!-- Box 7 -->
+                <div class="box">
+                    <img src="image-jeremy.png" alt="" class="img">
+                    <!-- Info -->
+                    <div class="info">
+                        <strong>mohammed</strong>
+                        <span>egypt</span>
+                    </div>
+                </div>
+
+                <!-- Box 8 -->
+                <div class="box">
+                    <img src="image-jeremy.png" alt="" class="img">
+                    <!-- Info -->
+                    <div class="info">
+                        <strong>mohammed</strong>
+                        <span>egypt</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </section>
+    <!-- Js file ==========-->
+    <script src="main.js"></script>
+</body>
+</html>

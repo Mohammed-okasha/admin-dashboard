@@ -1,0 +1,422 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-transform: capitalize;
+    background-color: rgb(245, 245, 245);
+    font-family: sans-serif;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.img {
+    width: 40px;
+    object-fit: cover;
+}
+/* =================================== */
+#dashboard {
+    width: 100%;
+    height: 1022px;
+    display: flex;
+}
+
+#dashboard .aside {
+    width: 20%;
+    height: 100%;
+    background-color: rgb(0 61 100);
+    transition: 0.5s;
+    padding-top: 15px;
+}
+
+#dashboard .aside.toggle-menu {
+    width: 8% ;
+    padding: 20px 0;
+}
+
+.aside.toggle-menu span {
+    display: none;
+    white-space: nowrap;
+    opacity: 0;
+    animation: opacity 0.5;
+}
+
+#dashboard .aside .logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    font-size: 1.8rem;
+    column-gap: 15px;
+    padding: 15px 20px;
+}
+
+#dashboard .aside .links {
+    list-style: none;
+    width: 100%;
+}
+
+#dashboard .aside .links li a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem;
+    column-gap: 15px;
+    white-space: nowrap;
+    padding: 15px 20px;
+    width: 100%;
+    transition: 0.5s;
+}
+.aside.toggle-menu .logo,
+.aside.toggle-menu .links li a {
+    justify-content: center;
+    transition: .5s;
+    padding: 10px 0;
+}
+
+#dashboard .aside #close {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+#dashboard .aside #close i {
+    color: #fff;
+    font-size: 2rem;
+}
+
+@media(max-width: 991px) {
+    #dashboard .aside {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 200;
+    }
+    #dashboard .aside.toggle-menu {
+        width: 100%;
+        left: 0;
+    }
+
+    .aside.toggle-menu span {
+        display: block;
+        opacity: 1;
+    }
+    .aside.toggle-menu .logo,
+    .aside.toggle-menu .links li a {
+        justify-content: flex-start;
+    }
+
+    #dashboard .aside #close {
+        display: block;
+    }
+}
+
+#dashboard .aside .links li a:hover {
+    background-color: rgb(0, 153, 255);
+}
+/* Content-container =====================*/
+.content-container {
+    width: 80%;
+    transition: 0.5s;
+}
+
+.content-container.toggle-menu {
+    width: 92%;
+}
+
+.content-container > * {
+    width: 100%;
+}
+
+@media(max-width: 991px) {
+    .content-container {
+        width: 100%;
+    }
+    .content-container.toggle-menu {
+        width: 100%;
+    }
+}
+/* Header =========================*/
+#dashboard #header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+    background-color: #fff;
+}
+
+#dashboard #header #nav-btn {
+    width: 40px;
+    height: 40px;
+    background: none;
+    cursor: pointer;
+    border: none;
+    display: grid;
+    place-items: center;
+}
+
+#dashboard #header #nav-btn .toggle {
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    display: block;
+    position: relative;
+}
+
+#dashboard #header #nav-btn .toggle::before,
+#dashboard #header #nav-btn .toggle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+#dashboard #header #nav-btn .toggle::before {
+    top: -8px;
+}
+
+#dashboard #header #nav-btn .toggle::after {
+    bottom: -8px;
+}
+
+#dashboard #header form {
+    width: 400px;
+    text-align: center;
+    height: 40px;
+}
+
+#dashboard #header form .search {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2%;
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 0 10px;
+}
+
+#dashboard #header form .search button[type="submit"] {
+    height: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#dashboard #header form .search button[type="submit"] > i {
+    font-size: 17px;
+}
+
+#dashboard #header form .search input[type="search"] {
+    width: 90%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    #dashboard #header form {
+        width: 300px;
+    }
+}
+
+@media (max-width: 500px) {
+    #dashboard #header {gap: 20px;}
+    #dashboard #header .admin-img {
+        display: none;
+    }
+    #dashboard #header form {
+        flex: 1;
+    }
+}
+/* Start Statistics =========================*/
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px ,1fr));
+    gap: 20px;
+    width: calc(100% - 40px);
+    margin: 20px;
+}
+
+.statistics .box {
+    height: 150px;
+    display: grid;
+    place-items: center;
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 0 20px;
+}
+
+.statistics .box .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.statistics .box .info .text span:first-child {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.statistics .info .text span:last-child {
+    font-size: 20px;
+    color: #777;
+}
+
+.statistics .info i {
+    color: rgb(0, 153, 255);
+}
+/* Start Recent =========================*/
+.recent-container {
+    width: calc(100% - 40px);
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.recent-container .recent-orders {
+    flex-basis: 60%;
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.recent-container .recent-orders .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.recent-container .recent-orders .heading .view {
+    width: 90px;
+    height: 30px;
+    background-color: rgb(0, 153, 255);
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    letter-spacing: .5px;
+    cursor: pointer;
+}
+
+.recent-container .recent-orders .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    column-gap: 10%;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+    padding: 15px 10px 10px;
+    transition: 0.5s;
+}
+
+.recent-container .recent-orders .row:not(:first-child):hover {
+    background-color: rgb(0, 153, 255);
+    color: #fff;
+}
+
+.recent-container .recent-orders .row .col:first-child {
+    flex-basis: 55%;
+}
+.recent-container .recent-orders .row .col:last-child {
+    flex-basis: 45%;
+}
+
+.recent-container .recent-orders .row .col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.recent-container .recent-orders .row .col .title {
+    font-size: 18px;
+}
+@media (max-width: 450px) {
+    .recent-container .recent-orders .row .col .title {
+        font-size: 15px;
+    }
+}
+
+.recent-container .recent-orders .row .col:last-child .title:last-child span {
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    letter-spacing: .3px;
+}
+.recent-container .recent-orders .row .col .title span {
+    font-size: 16px;
+    white-space: nowrap;
+}
+/* Recent Customers ===================================*/
+#recent-customers {
+    flex-basis: calc(40% - 20px);
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#recent-customers h2 {
+    margin-bottom: 20px;
+}
+
+#recent-customers .box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#recent-customers .box:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+#recent-customers .box .info strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+#recent-customers .box .info span {
+    color: #777;
+}
+
+@media(max-width: 991px) {
+    .recent-container .recent-orders,
+    .recent-container #recent-customers {
+        flex-basis: 100% ;
+    }
+}
+
+
+@keyframes opacity {
+    100%{opacity: 1;}
+}
+
